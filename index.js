@@ -7,7 +7,7 @@ const restartBtn = document.querySelector(".restart")
 
 function guessOutcome(){
     const guessedNumber = Number(inputValue.value);
-    
+    console.log(randomNumber);
     if(guessedNumber > randomNumber){
         message.innerHTML = "Your guess is too high";
     }
@@ -16,6 +16,10 @@ function guessOutcome(){
     }
     else {
         message.innerHTML = `Correct, the secret number is ${randomNumber}`;
+        setTimeout(function(){
+            randomNumber = Math.ceil((Math.random() * 100));
+                message.innerHTML = "guess the new number";
+        }, 5000);
         // newRandomNumber()
     }
 
@@ -27,6 +31,9 @@ function guessOutcome(){
 btn.addEventListener('click', guessOutcome)
 
 function newGame(){
+    // setTimeout(function(){
+	// 	message.innerHTML = "A new game has started!";
+	// }, 5000);
     message.innerHTML = "A new game has started!";
     
     // guessOutcome();
