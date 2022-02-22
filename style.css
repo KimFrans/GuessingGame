@@ -1,6 +1,68 @@
 body{
     box-sizing: border-box;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    /* background-image: linear-gradient(to right, red,rgb(236, 73, 73),rgb(236, 69, 161),rgb(243, 114, 178),rgb(243, 245, 128),rgb(236, 247, 81),rgb(242, 245, 97)); */
+    background-image: linear-gradient(to right, rgb(0, 68, 255),rgb(73, 176, 236),rgb(238, 99, 176),rgb(241, 128, 245),rgb(190, 22, 190));
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+}
+
+h1{
+    letter-spacing: 3px;
+    font-style: oblique;
+}
+
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.inputGuess{
+    height: 2em;
+}
+
+.guessbtn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    height: 2.5em;
+    font-size: 15px;
+}
+  
+.guessbtn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.restart{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    height: 2.5em;
+    font-size: 15px;
+}
+.restart:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.outputMessage{
+    padding-bottom: 1.5%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.restartButton{
+    padding-top: 1.5%;
+    
 }

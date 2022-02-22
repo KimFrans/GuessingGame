@@ -1,13 +1,9 @@
-// let randomNumber = document.querySelector(".random");
-
 let randomNumber = Math.ceil((Math.random() * 100));
-// console.log(generator);
-// randomNumber.innerHTML = generator
-// randomNumber = generator;
 
-const inputValue = document.querySelector(".inputGuess");
+let inputValue = document.querySelector(".inputGuess");
 const message = document.querySelector(".outputMessage");
 const btn = document.querySelector(".guessbtn");
+const restartBtn = document.querySelector(".restart")
 
 function guessOutcome(){
     const guessedNumber = Number(inputValue.value);
@@ -20,6 +16,7 @@ function guessOutcome(){
     }
     else {
         message.innerHTML = `Correct, the secret number is ${randomNumber}`;
+        // newRandomNumber()
     }
 
     setTimeout(function(){
@@ -28,4 +25,26 @@ function guessOutcome(){
 }
 
 btn.addEventListener('click', guessOutcome)
+
+function newGame(){
+    message.innerHTML = "A new game has started!";
+    
+    // guessOutcome();
+}
+window.onload = newGame()
+
+// restartBtn.addEventListener('click', newGame)
+
+// function newRandomNumber(){
+//     const guessedNumber = Number(inputValue.value);
+//     if(guessedNumber == randomNumber){
+//         console.log("match");
+//         randomNumber
+//         console.log(randomNumber);
+//         setTimeout(function(){
+//             message.innerHTML = "guess the new number";
+//         }, 5000);
+//     }
+    
+// }
 
