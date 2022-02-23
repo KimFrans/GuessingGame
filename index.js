@@ -38,10 +38,11 @@ function guessOutcome(){
 btn.addEventListener('click', guessOutcome)
 
 function newGame(){
+   
+    message.innerHTML = "A new game has started!";
     setTimeout(function(){
-		message.innerHTML = "A new game has started!";
+		message.innerHTML = " ";
 	}, 3000);
-    // message.innerHTML = "A new game has started!";
     
 }
 window.onload = newGame()
